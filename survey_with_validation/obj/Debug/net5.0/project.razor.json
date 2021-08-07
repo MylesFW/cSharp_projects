@@ -15634,6 +15634,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\survey_with_validation\\Views\\Home\\Numbers.cshtml",
+      "TargetPath": "Views\\Home\\Numbers.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\survey_with_validation\\Views\\Home\\Names.cshtml",
+      "TargetPath": "Views\\Home\\Names.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\survey_with_validation\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
@@ -15646,6 +15656,11 @@
     {
       "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\survey_with_validation\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\survey_with_validation\\Views\\Home\\Name.cshtml",
+      "TargetPath": "Views\\Home\\Name.cshtml",
       "FileKind": "mvc"
     },
     {

@@ -28,29 +28,63 @@ namespace survey_with_validation.Controllers
         }
         // ASSIGNMENT ----------------------------------------------------
         [HttpGet("")]
-        // public IActionResult Index()
-        // {
-        //     IndexView singleUser = new IndexView()
-        //     {
-        //         FirstName = "John",
-        //         LastName = "Williams"
-        //     };
-        //     return View(singleUser);
-        // }
-
-        public IActionResult Index(string[] args)
+        public IActionResult Index()
         {
-            IndexNameList listOfNames = new IndexNameList()
+            IndexView_Message messageDisplay = new IndexView_Message()
             {
-            names = new string[] 
+                SingleMessage = "Here is the home screen message!"
+            };
+            return View(messageDisplay);
+        }
+
+
+        [HttpGet("name")]
+        public IActionResult Name()
+        {
+            IndexView_Name singleUser = new IndexView_Name()
+            {
+                FirstName = "Myles",
+                LastName = "Williams"
+            };
+            return View(singleUser);
+        }
+
+        [HttpGet("names")]
+
+        public IActionResult Names(string[] args)
+        {
+            IndexView_Names listOfNames = new IndexView_Names()
+            {
+            names = new string[]
                 {
                     "Myles",
-                    "Jack",
-                    "Benny",
-                    "Moose"
+                    "Johnny",
+                    "Randy",
+                    "Mr. Layhe",
+                    "Bubbles",
+                    "Moose",
                 }
             };
         return View(listOfNames);
+        }
+
+        [HttpGet("numbers")]
+
+        public IActionResult Numbers(int[] args)
+        {
+            IndexView_Numbers listOfNumbers = new IndexView_Numbers()
+            {
+            numbers = new int[] 
+                {
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                }
+            };
+        return View(listOfNumbers);
         }
     }
 }

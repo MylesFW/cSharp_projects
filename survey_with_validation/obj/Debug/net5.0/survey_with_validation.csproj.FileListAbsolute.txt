@@ -38,3 +38,6 @@ C:\Users\Myles\Desktop\Coding Dojo\C#\cSharp_projects\survey_with_validation\obj
 C:\Users\Myles\Desktop\Coding Dojo\C#\cSharp_projects\survey_with_validation\obj\Debug\net5.0\survey_with_validation.pdb
 C:\Users\Myles\Desktop\Coding Dojo\C#\cSharp_projects\survey_with_validation\obj\Debug\net5.0\survey_with_validation.genruntimeconfig.cache
 C:\Users\Myles\Desktop\Coding Dojo\C#\cSharp_projects\survey_with_validation\obj\Debug\net5.0\survey_with_validation.csproj.CopyComplete
+C:\Users\Myles\Desktop\Coding Dojo\C#\cSharp_projects\survey_with_validation\obj\Debug\net5.0\Razor\Views\Home\Numbers.cshtml.g.cs
+C:\Users\Myles\Desktop\Coding Dojo\C#\cSharp_projects\survey_with_validation\obj\Debug\net5.0\Razor\Views\Home\Names.cshtml.g.cs
+C:\Users\Myles\Desktop\Coding Dojo\C#\cSharp_projects\survey_with_validation\obj\Debug\net5.0\Razor\Views\Home\Name.cshtml.g.cs

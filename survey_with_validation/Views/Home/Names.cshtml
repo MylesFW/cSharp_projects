@@ -1,14 +1,16 @@
-﻿@{
+@{
     ViewData["Title"] = "Home Page";
 }
-@model IndexView_Message
+@model IndexView_Names
 
 
 <div class="text-center">
     <h1 class="display-4">Assignment: ViewModel Fun</h1>
 
-    <h4>Message: @Model.SingleMessage</>
-
+    <h2>Here are some users!</h2>
+    @foreach(var name in @Model.names){
+        <p>@name</p>
+}
 
 
 </div>
