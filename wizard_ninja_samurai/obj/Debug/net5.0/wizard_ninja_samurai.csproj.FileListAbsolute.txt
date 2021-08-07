@@ -1,0 +1,16 @@
+C:\Users\Myles\Desktop\Coding Dojo\C#\wizard_ninja_samurai\bin\Debug\net5.0\wizard_ninja_samurai.exe
+C:\Users\Myles\Desktop\Coding Dojo\C#\wizard_ninja_samurai\bin\Debug\net5.0\wizard_ninja_samurai.deps.json
+C:\Users\Myles\Desktop\Coding Dojo\C#\wizard_ninja_samurai\bin\Debug\net5.0\wizard_ninja_samurai.runtimeconfig.json
+C:\Users\Myles\Desktop\Coding Dojo\C#\wizard_ninja_samurai\bin\Debug\net5.0\wizard_ninja_samurai.runtimeconfig.dev.json
+C:\Users\Myles\Desktop\Coding Dojo\C#\wizard_ninja_samurai\bin\Debug\net5.0\wizard_ninja_samurai.dll
+C:\Users\Myles\Desktop\Coding Dojo\C#\wizard_ninja_samurai\bin\Debug\net5.0\ref\wizard_ninja_samurai.dll
+C:\Users\Myles\Desktop\Coding Dojo\C#\wizard_ninja_samurai\bin\Debug\net5.0\wizard_ninja_samurai.pdb
+C:\Users\Myles\Desktop\Coding Dojo\C#\wizard_ninja_samurai\obj\Debug\net5.0\wizard_ninja_samurai.csproj.AssemblyReference.cache
+C:\Users\Myles\Desktop\Coding Dojo\C#\wizard_ninja_samurai\obj\Debug\net5.0\wizard_ninja_samurai.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Myles\Desktop\Coding Dojo\C#\wizard_ninja_samurai\obj\Debug\net5.0\wizard_ninja_samurai.AssemblyInfoInputs.cache
+C:\Users\Myles\Desktop\Coding Dojo\C#\wizard_ninja_samurai\obj\Debug\net5.0\wizard_ninja_samurai.AssemblyInfo.cs
+C:\Users\Myles\Desktop\Coding Dojo\C#\wizard_ninja_samurai\obj\Debug\net5.0\wizard_ninja_samurai.csproj.CoreCompileInputs.cache
+C:\Users\Myles\Desktop\Coding Dojo\C#\wizard_ninja_samurai\obj\Debug\net5.0\wizard_ninja_samurai.dll
+C:\Users\Myles\Desktop\Coding Dojo\C#\wizard_ninja_samurai\obj\Debug\net5.0\ref\wizard_ninja_samurai.dll
+C:\Users\Myles\Desktop\Coding Dojo\C#\wizard_ninja_samurai\obj\Debug\net5.0\wizard_ninja_samurai.pdb
+C:\Users\Myles\Desktop\Coding Dojo\C#\wizard_ninja_samurai\obj\Debug\net5.0\wizard_ninja_samurai.genruntimeconfig.cache
