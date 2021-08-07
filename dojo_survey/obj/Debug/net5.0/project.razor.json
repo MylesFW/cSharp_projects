@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\dojo_survey\\ProjectName\\ProjectName.csproj",
+  "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\dojo_survey\\ProjectName.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15619,12 +15619,12 @@
   "RootNamespace": "ProjectName",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\dojo_survey\\ProjectName\\Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\dojo_survey\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\dojo_survey\\ProjectName\\Views\\Home\\Result.cshtml",
+      "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\dojo_survey\\Views\\Home\\Result.cshtml",
       "TargetPath": "Views\\Home\\Result.cshtml",
       "FileKind": "mvc"
     }
