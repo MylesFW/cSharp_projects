@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\dojo_survey\\ProjectName\\ProjectName.csproj": {}
+    "C:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\dojo_survey\\ProjectName.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\dojo_survey\\ProjectName\\ProjectName.csproj": {
+    "C:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\dojo_survey\\ProjectName.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\dojo_survey\\ProjectName\\ProjectName.csproj",
+        "projectUniqueName": "C:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\dojo_survey\\ProjectName.csproj",
         "projectName": "ProjectName",
-        "projectPath": "C:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\dojo_survey\\ProjectName\\ProjectName.csproj",
+        "projectPath": "C:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\dojo_survey\\ProjectName.csproj",
         "packagesPath": "C:\\Users\\Myles\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\dojo_survey\\ProjectName\\obj\\",
+        "outputPath": "C:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\dojo_survey\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Myles\\AppData\\Roaming\\NuGet\\NuGet.Config"

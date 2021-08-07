@@ -1,0 +1,33 @@
+@using dojo_survey_with_model.Models
+@model HogwartsStudent
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="~/css/style.css"/>
+  <title>Document</title>
+</head>
+<body>
+    <hr>
+    <h3>Model with Form</h3>
+      <form action="/results" method="post">
+        <label>Your Name: </label>
+        <input type="text" name="Name"></input>
+        <br>
+        <select name="House">
+          <option>Good</option>
+          <option>Good-ish</option>
+          <option>Bad-ish</option>
+          <option>Bad</option>
+        </select>
+        <br>
+        <label>Year: </label>
+        <input type="number" name="CurrentYear">
+        <br>
+        <button type="submit">Submit</button>
+      </form>
+</body>
+</html>
