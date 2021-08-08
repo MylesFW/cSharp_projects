@@ -1,0 +1,35 @@
+@using dojo_survey.Models
+@model User
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="~/css/style.css"/>
+  <title>Document</title>
+</head>
+<body>
+    <hr>
+    <h3>About Me</h3>
+      <form asp-action="Create" asp-controller="Home" method="post">
+        <span asp-validation-for="Username"></span>
+          <label asp-for="Username">Your Name: </label>
+          <input asp-for="Username"></input>
+      <br>
+        <span asp-validation-for="Email"></span>
+          <label asp-for="Email">Email: </label>
+          <input asp-for="Email"></input>
+      <br>
+        <span asp-validation-for="Password"></span>
+          <label asp-for="Password">Password: </label>
+          <input asp-for="Password"></input>
+      <br>
+        <span asp-validation-for="Comment"></span>
+          <label asp-for="Comment">Additional Comment: </label>
+          <input asp-for="Comment"></input>
+      <br>
+        <button value="newUser">Submit</button>
+      </form>
+</body>
+</html>
