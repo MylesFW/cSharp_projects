@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model CodeGenerator
+
+<div class="text-center">
+    <h4 class="display-4">Passcode Generator (passcode # @Model.Counter)</h4>
+    <form>
+        <div class="col-xs-4">
+            <p>
+                <h2>@Model.Passcode</h2>
+            </p>
+        </div>
+        <div>
+            <button>Generate New Passcode</button>
+        </div>
+    </form>
+</div>
