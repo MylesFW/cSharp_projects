@@ -1,0 +1,26 @@
+﻿@using crud_elicious.Models
+@model List<Dish> //tells the page what type of information it is getting 
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h3 class="display-4">Welcome to CRUDelicious</h3>
+
+    <div class="col-sm-6 mx-auto mx-auto">
+        <div class="card" >
+                <div class="card-body">
+                    <h3>Peep these totally D-lish dishes!</h3>
+                    <table class="table table-striped">
+                        @foreach(var dish in @Model)
+                        {
+                            <tr>
+                                <td><a href="@dish.DishId">@dish.Name</a> created by @dish.Chef</td>
+                            </tr> 
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+</div>

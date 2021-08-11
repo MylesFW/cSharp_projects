@@ -1,0 +1,40 @@
+@using crud_elicious.Models
+@model Dish //tells the page what type of information it is getting 
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h3 class="display-4">@Model.Name</h3>
+    <h3>Created by @Model.Chef</h3>
+
+    <div class="col-sm-6 mx-auto mx-auto">
+        <div class="card">
+                <div class="card-body text-left">
+                        <h5>@Model.Description</h5>
+                    <hr>
+                    <table class="">
+                        <tr>
+                            <th scope="row">Calorie Count: </th>
+                            <td class="text-center">@Model.Calories
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tastiness Level: </th>
+                            <td class="text-center"> @Model.Tastiness
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="mb-3" >
+                    <a class="btn btn-danger mt-3" href="/delete/@Model.DishId">
+                        Delete
+                    </a>
+                    <a class="btn btn-primary mt-3" href="/edit/@Model.DishId">
+                        Edit
+                    </a>
+                </div>
+            </div>
+        </div>
+</div>
