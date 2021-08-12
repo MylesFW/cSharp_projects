@@ -47,6 +47,10 @@ namespace login_and_registration.Controllers
             return View();
         }
 
+
+
+
+
         [HttpGet("logout")]
         public IActionResult Logout()
         {
@@ -57,7 +61,6 @@ namespace login_and_registration.Controllers
             HttpContext.Session.Clear();
             return View("RegisterPage");
         }
-
 
         [HttpPost("register")]
         public IActionResult Register(User newUser)
