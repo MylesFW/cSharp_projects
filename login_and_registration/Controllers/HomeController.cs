@@ -47,6 +47,16 @@ namespace login_and_registration.Controllers
             return View();
         }
 
+        [HttpGet("logout")]
+        public IActionResult Logout()
+        {
+            if(HttpContext.Session.GetString("Email") == null)
+            {
+                return RedirectToAction("LoginPage");
+            }
+            HttpContext.Session.Clear();
+            return View("RegisterPage");
+        }
 
 
         [HttpPost("register")]
