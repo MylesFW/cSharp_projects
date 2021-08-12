@@ -1,0 +1,52 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center d-flex">
+    <h2>Welcome to CheeZie's Rat Emporium and Child Casino</h2><h5>&#169;</h5><h2>!</h2>
+</div>
+<div class="text-left d-flex">
+    <h3>Register to Start earning CheeZie<h5>&#169; </h5> <h3>  Tokens to spend on Fabulous Prizes!</h3>
+</div>
+<div>
+    <a href="login">Login Here</a>
+</div>
+<table class="table w-50">
+    <form asp-action="register" asp-controller="Home" method="post">
+        <br>
+    <tr>
+            <td><label asp-for="FirstName"></label></td>
+            <td><input asp-for="FirstName"></td>
+            <td colspan="2"><span asp-validation-for="FirstName"></span></td>
+        <br>
+    </tr>
+    <tr>
+            <td><label asp-for="LastName"></label></td>
+            <td><input asp-for="LastName"></td>
+            <td colspan="2"><span asp-validation-for="LastName"></span></td>
+        <br>
+    </tr>
+    <tr>
+            <td><label asp-for="Email"></label></td>
+            <td><input asp-for="Email"></td>
+            <td colspan="2"><span asp-validation-for="Email"></span></td>
+        <br>
+    </tr>
+    <tr>
+            <td><label asp-for="Password"></label></td>
+            <td><input asp-for="Password"></td>
+            <td colspan="2"><span asp-validation-for="Password"></span></td>
+        <br>
+    </tr>
+    <tr>
+            <td><label asp-for="ConfirmPassword"></label></td>
+            <td><input asp-for="ConfirmPassword"></td>
+            <td colspan="2"><span asp-validation-for="ConfirmPassword"></span></td>
+        <br>
+    </tr>
+    <tr>
+        <td colspan="2" ><button>Register</button></td>
+    </tr>
+    </form>
+</table>

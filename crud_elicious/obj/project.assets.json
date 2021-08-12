@@ -907,11 +907,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\crud_elicious\\crud_elicious.csproj",
+      "projectUniqueName": "C:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\crud_elicious\\crud_elicious.csproj",
       "projectName": "crud_elicious",
-      "projectPath": "C:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\crud_elicious\\crud_elicious.csproj",
+      "projectPath": "C:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\crud_elicious\\crud_elicious.csproj",
       "packagesPath": "C:\\Users\\Myles\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\crud_elicious\\obj\\",
+      "outputPath": "C:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\crud_elicious\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Myles\\AppData\\Roaming\\NuGet\\NuGet.Config"
