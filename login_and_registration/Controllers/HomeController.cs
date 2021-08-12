@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using login_and_registration.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Http;
 
 namespace login_and_registration.Controllers
 {
@@ -30,18 +31,21 @@ namespace login_and_registration.Controllers
             return View();
         }
 
-        [HttpGet("home")]
-        public IActionResult HomePage()
-        {
-            return View();
-        }
-
         [HttpGet("login")]
         public IActionResult LoginPage()
         {
             return View();
         }
 
+        [HttpGet("home")]
+        public IActionResult HomePage()
+        {
+            if(HttpContext.Session.GetString("Email") == null)
+            {
+                return RedirectToAction("LoginPage");
+            }
+            return View();
+        }
 
 
 
@@ -58,7 +62,12 @@ namespace login_and_registration.Controllers
                 newUser.Password = Hasher.HashPassword(newUser, newUser.Password);
                 db.Users.Add(newUser);
                 db.SaveChanges();
+
+                if(HttpContext.Session.GetString("Email") == null)
+                    HttpContext.Session.SetString("Email", "User.Email");
+
                 return RedirectToAction("HomePage");
+
             }
             return View("RegisterPage");
         }
@@ -82,6 +91,8 @@ namespace login_and_registration.Controllers
                     ModelState.AddModelError("Email", "This Email is already in use!");
                 }
             }
+            if(HttpContext.Session.GetString("Email") == null)
+                HttpContext.Session.SetString("Email", "User.Email");
             return View("HomePage");
         }
 
