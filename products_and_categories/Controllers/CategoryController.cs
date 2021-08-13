@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -9,15 +9,14 @@ using products_and_categories.Models;
 
 namespace products_and_categories.Controllers
 {
-    public class HomeController : Controller
+    public class CategoryController : Controller
     {
     private products_and_categoriesContext db;
-    public HomeController(products_and_categoriesContext context)
+    public CategoryController(products_and_categoriesContext context)
     {
         db = context;
     }
 //****************************************************************************************************
-
 
         public IActionResult Index()
         {
