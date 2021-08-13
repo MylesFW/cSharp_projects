@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using chefs_and_dishes.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
 
 namespace chefs_and_dishes.Controllers
 {
@@ -19,34 +20,26 @@ namespace chefs_and_dishes.Controllers
             db = context;
         }
 
-        [HttpGet("")]
-        public IActionResult AllChefs()
-        {
-            List<Chef> allChefs = db.Chefs.ToList();
-            return View(allChefs);
-        }
 
+        //--------------------------------------------------------------------
         [HttpGet("/dishes")]
         public IActionResult AllDishes()
         {
-            List<Chef> allChefs = db.Chefs.ToList();
-            return View();
+            List<Dish> allDishes = db.Dishes
+            .Include(d => d.Creator) // able to include the ChefName in the table
+            .ToList();
+            return View(allDishes);
         }
 
-
-        [HttpGet("/new")]
-        public IActionResult AddChef()
-        {
-            return View();
-        }
 
         [HttpGet("/dishes/new")]
         public IActionResult AddDish()
         {
-            List<Chef> allChefs = db.Chefs.ToList();
+            List<Chef> allChefs = db.Chefs.ToList(); //adds the ChefName dropdown
             ViewBag.allChefs = allChefs;
             return View();
         }
+
 
         [HttpPost("/dishes/new")]
         public IActionResult AddDish(Dish newDish)
@@ -59,8 +52,26 @@ namespace chefs_and_dishes.Controllers
             }
             return View("AddDish");
         }
+
         //--------------------------------------------------------------------
-        [HttpPost("/new")]
+        [HttpGet("")] //render the page with the list of chefs
+        public IActionResult AllChefs() 
+        {
+            List<Chef> allChefs = db.Chefs
+            .Include(chef => chef.CreatedDishes)
+            .ToList();
+            return View(allChefs);
+        }
+
+
+        [HttpGet("/new")] //render the new chef page
+        public IActionResult AddChef()
+        {
+            return View();
+        }
+
+
+        [HttpPost("/new")] //add the new chef to the db and route back to AllChefs
         public IActionResult AddChef(Chef newChef)
         {
             if (ModelState.IsValid)
@@ -72,13 +83,6 @@ namespace chefs_and_dishes.Controllers
             return View("AddChef");
         }
         //--------------------------------------------------------------------
-
-
-
-
-
-
-
 
 
         public IActionResult Privacy()

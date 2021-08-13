@@ -11,24 +11,23 @@
                         <h1 class="display-4">Add a new Chef!</h1><hr>
                         <form asp-action="AddChef" asp-controller="Home" method="post">
                             <tr>
-                                    <td><label asp-for="FirstName"></label></td>
-                                    <td><input asp-for="FirstName"></td>
-                                    <td colspan="2"><span asp-validation-for="FirstName"></span></td>
-                                <br>
+                                <td><label asp-for="FirstName"></label></td>
+                                <td><input asp-for="FirstName"></td>
+                                <td colspan="2"><span asp-validation-for="FirstName"></span></td>
                             </tr>
                             <tr>
-                                    <td><label asp-for="LastName"></label></td>
-                                    <td><input asp-for="LastName"></td>
-                                    <td colspan="2"><span asp-validation-for="LastName"></span></td>
-                                <br>
+                                <td><label asp-for="LastName"></label></td>
+                                <td><input asp-for="LastName"></td>
+                                <td colspan="2"><span asp-validation-for="LastName"></span></td>
                             </tr>
                             <tr>
-                                    <td><label asp-for="DOB"></label></td>
-                                    <td><input asp-for="DOB"></td>
-                                    <td colspan="2"><span asp-validation-for="DOB"></span></td>
-                                <br>
+                                <td><label asp-for="DOB"></label></td>
+                                <td><input asp-for="DOB"></td>
+                                <td colspan="2"><span asp-validation-for="DOB"></span></td>
                             </tr>
-                                <td colspan="2" ><button>Add</button></td>
+                                <td colspan="2">
+                                    <button type="button" class="btn btn-dark btn-rounded">Add New Chef</button>
+                                </td>
                             </tr>
                         </form>
                     </table>

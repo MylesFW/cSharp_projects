@@ -7,22 +7,30 @@
 
 
 <div class="text-center">
-    <h1 class="display-4">Take a look at these tasty chefs!</h1>
+    <h1 class="display-4 font-italic">A list of our Featured Chefs!</h1><hr>
     <div class="col-sm-6 mx-auto mx-auto">
         <div class="card" >
                 <div class="card-body">
                     <table class="table table-striped">
+                        <tr>
+                            <th>Chef</th>
+                            <th>Age</th>
+                            <th># of Dishes</th>
+                        </tr>
                         @foreach(var chef in Model)
                         {
                             <tr>
                                 <td>
-                                    <p>@chef.FirstName</p>
+                                    @chef.FirstName 
+                                    @chef.LastName
                                 </td>
                                 <td>
-                                    <p>@chef.LastName</p>
-                                </td>
-                                <td>
-                                    <p>@chef.DOB</p>
+                                    @{
+                                        int now = int.Parse(DateTime.Now.ToString("yyyyMMdd"));
+                                        int dob = int.Parse(@chef.DOB.ToString("yyyyMMdd"));
+                                        int age = (now - dob) / 10000;
+                                    }
+                                    @age
                                 </td>
                                 <td>
                                     @if (chef.CreatedDishes == null)

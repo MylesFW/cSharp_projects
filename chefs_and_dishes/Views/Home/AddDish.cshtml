@@ -7,53 +7,50 @@
     <div class="col-sm-6 mx-auto mx-auto">
         <div class="card" >
                 <div class="card-body">
-                    <table class="table table-striped">
                         <h1 class="display-4">Add a new Dish!</h1><hr>
+                    <table class="table table-striped">
                         <form asp-controller="Home" asp-action="AddDish" method="post">
                             <tr>
-                                    <td><label asp-for="DishName"></label></td>
-                                    <td><input asp-for="DishName"></td>
-                                    <td colspan="2"><span asp-validation-for="DishName"></span></td>
-                                <br>
+                                <td><label asp-for="DishName"></label></td>
+                                <td><input asp-for="DishName"></td>
+                                <td colspan="2"><span asp-validation-for="DishName"></span></td>
                             </tr>
                             <tr>
-                                    <td><label asp-for="Calories"></label></td>
-                                    <td><input asp-for="Calories"></td>
-                                    <td colspan="2"><span asp-validation-for="Calories"></span></td>
-                                <br>
+                                <td><label asp-for="Calories"></label></td>
+                                <td><input asp-for="Calories"></td>
+                                <td colspan="2"><span asp-validation-for="Calories"></span></td>
                             </tr>
                             <tr>
-                                    <td><label asp-for="Description"></label></td>
-                                    <td><input asp-for="Description"></td>
-                                    <td colspan="2"><span asp-validation-for="Description"></span></td>
-                                <br>
+                                <td><label asp-for="Description"></label></td>
+                                <td><input asp-for="Description"></td>
+                                <td colspan="2"><span asp-validation-for="Description"></span></td>
                             </tr>
                             <tr>
-                                    <td><label asp-for="Tastiness"></label></td>
-                                    <td><select asp-for="Tastiness">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        </select>
-                                    </td>
-                                    <td colspan="2"><span asp-validation-for="Tastiness"></span></td>
-                                <br>
+                                <td><label asp-for="Tastiness"></label></td>
+                                <td><select asp-for="Tastiness">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    </select>
+                                </td>
+                                <td colspan="2"><span asp-validation-for="Tastiness"></span></td>
                             </tr>
                             <tr>
-                                    <td>
-                                    <td><select asp-for="Creator">
-                                        @foreach (var chef in ViewBag.allChefs)
-                                        {
-                                            <option value="@chef.ChefId">@chef.FirstName @chef.LastName</option>
-                                        }
-                                        </select>
-                                    </td>
-                                    <td colspan="2"><span asp-validation-for="Creator"></span></td>
-                                <br>
+                                <td><label asp-for="ChefId">Name of Chef</label></td>
+                                <td><select asp-for="ChefId">
+                                    @foreach (var chef in ViewBag.allChefs)
+                                    {
+                                        <option value="@chef.ChefId">@chef.FirstName @chef.LastName</option>
+                                    }
+                                    </select>
+                                </td>
+                                <td colspan="2"><span asp-validation-for="ChefId"></span></td>
                             </tr>
-                                <td colspan="2" ><button>Add Dish</button></td>
+                                <td colspan="2" >
+                                    <button type="button" class="btn btn-dark btn-rounded">Create Dish</button>
+                                </td>
                             </tr>
                         </form>
                     </table>

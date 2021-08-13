@@ -7,11 +7,17 @@
 
 
 <div class="text-center">
-    <h1 class="display-4">Take a look at these tasty dishes!</h1>
+    <h1 class="display-4 font-italic">A Look at our Menu! </h1><hr>
     <div class="col-sm-6 mx-auto mx-auto">
         <div class="card" >
                 <div class="card-body">
                     <table class="table table-striped">
+                        <tr>
+                            <th>Dish</th>
+                            <th>Chef</th>
+                            <th>Tastiness</th>
+                            <th>Calories</th>
+                        </tr>
                         @foreach(var dish in Model)
                         {
                             <tr>
@@ -20,9 +26,13 @@
                                 </td>
                                 <td>
                                     @dish.Creator.FirstName 
+                                    @dish.Creator.LastName
                                 </td>
                                 <td>
-                                    @dish.Creator.LastName
+                                    @dish.Tastiness 
+                                </td>
+                                <td>
+                                    @dish.Calories 
                                 </td>
                             </tr>
                         }
