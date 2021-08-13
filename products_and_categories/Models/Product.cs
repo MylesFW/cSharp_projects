@@ -14,6 +14,6 @@ namespace products_and_categories.Models
         public double ProductPrice {get;set;}
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
-        public List<Association> Association {get;set;}
-        }
+        public List<Association> ProductList {get;set;}
+    }
 }
