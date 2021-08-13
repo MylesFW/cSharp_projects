@@ -1,0 +1,43 @@
+﻿@model List<Chef>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<div class="text-center">
+    <h1 class="display-4">Take a look at these tasty chefs!</h1>
+    <div class="col-sm-6 mx-auto mx-auto">
+        <div class="card" >
+                <div class="card-body">
+                    <table class="table table-striped">
+                        @foreach(var chef in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <p>@chef.FirstName</p>
+                                </td>
+                                <td>
+                                    <p>@chef.LastName</p>
+                                </td>
+                                <td>
+                                    <p>@chef.DOB</p>
+                                </td>
+                                <td>
+                                    @if (chef.CreatedDishes == null)
+                                    {
+                                        <p>0</p>
+                                    }
+                                    else
+                                    {
+                                        @chef.CreatedDishes.Count();
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+</div>
