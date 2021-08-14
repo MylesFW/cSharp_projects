@@ -18,10 +18,10 @@ namespace products_and_categories.Controllers
     }
 //****************************************************************************************************
 
-
+        [HttpGet("")]
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Products", "Product");
         }
 
         public IActionResult Privacy()

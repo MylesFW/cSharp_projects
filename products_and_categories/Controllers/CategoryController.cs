@@ -17,8 +17,8 @@ namespace products_and_categories.Controllers
         db = context;
     }
 //****************************************************************************************************
-
-        public IActionResult Index()
+        [HttpGet("/categories")]
+        public IActionResult Categories()
         {
             return View();
         }

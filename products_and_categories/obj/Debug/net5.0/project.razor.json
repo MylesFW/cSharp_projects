@@ -15624,6 +15624,21 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\products_and_categories\\Views\\Category\\_ExistingCategories.cshtml",
+      "TargetPath": "Views\\Category\\_ExistingCategories.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\products_and_categories\\Views\\Category\\_NewCategory.cshtml",
+      "TargetPath": "Views\\Category\\_NewCategory.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\products_and_categories\\Views\\Product\\_ExistingProducts.cshtml",
+      "TargetPath": "Views\\Product\\_ExistingProducts.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\products_and_categories\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
@@ -15639,8 +15654,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\products_and_categories\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\products_and_categories\\Views\\Product\\Products.cshtml",
+      "TargetPath": "Views\\Product\\Products.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15649,8 +15664,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\products_and_categories\\Views\\Product\\_NewProduct.cshtml",
+      "TargetPath": "Views\\Product\\_NewProduct.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\products_and_categories\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\products_and_categories\\Views\\Category\\Categories.cshtml",
+      "TargetPath": "Views\\Category\\Categories.cshtml",
       "FileKind": "mvc"
     }
   ],

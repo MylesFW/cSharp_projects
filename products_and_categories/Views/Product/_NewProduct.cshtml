@@ -1,0 +1,32 @@
+@model Product
+
+<div class="text-center">
+  <div class="card w-50" >
+    <div class="card-body">
+        <table class="table table-striped">
+            <h1 class="display-4">New Product</h1><hr>
+            <form asp-action="AddProduct" asp-controller="Product" method="post">
+                <tr>
+                    <td><label asp-for="ProductName"></label></td>
+                    <td><input asp-for="ProductName"></td>
+                    <td colspan="2"><span asp-validation-for="ProductName"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="ProductDescription"></label></td>
+                    <td><input asp-for="ProductDescription"></td>
+                    <td colspan="2"><span asp-validation-for="ProductDescription"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="ProductPrice"></label></td>
+                    <td><input asp-for="ProductPrice"></td>
+                    <td colspan="2"><span asp-validation-for="ProductPrice"></span></td>
+                </tr>
+                    <td colspan="2">
+                        <button type="button" class="btn btn-dark btn-rounded">Add Product</button>
+                    </td>
+                </tr>
+            </form>
+        </table>
+    </div>
+  </div>
+</div>

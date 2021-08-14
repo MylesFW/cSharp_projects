@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">all products</h1>
+</div>
+<div>
+    <div>
+        @{
+            Product newProduct = new Product();
+            <partial model="@newProduct" name="_NewProduct"></partial> 
+        }
+        @* model = used for passing in different model types *@
+    </div>
+    <div>
+
+        <partial name="_ExistingProducts"></partial>
+    </div>
+</div>
+
