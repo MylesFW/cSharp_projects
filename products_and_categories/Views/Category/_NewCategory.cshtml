@@ -1,0 +1,23 @@
+@model Category
+
+<div class="text-center">
+  <div class="card w-100" >
+    <div class="card-body">
+        <table class="table table-striped">
+            <h1 class="display-4">New Category</h1><hr>
+            <form asp-action="AddCategory" asp-controller="Category" method="post">
+                <tr>
+                    <td><label asp-for="CategoryName"></label></td>
+                    <td><input asp-for="CategoryName"></td>
+                    <td colspan="2"><span asp-validation-for="CategoryName"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="button" class="btn btn-dark btn-rounded">Add Category</button>
+                    </td>
+                </tr>
+            </form>
+        </table>
+    </div>
+  </div>
+</div>

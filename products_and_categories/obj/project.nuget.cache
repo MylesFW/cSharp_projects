@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pHqt9UJvTaGvJeNLZobwhMJ0ysDsF8Py8q2YIIk/8sTpgeL8aVbgnkt1urrDbfLVzxm5TTXpO3T5wTmTRLp8Bw==",
+  "dgSpecHash": "NMEo2+pDqM3EipvqO2AkaL3DiDThjMZU+Glxfq3ItkkmF9MLKze1kHdaLfwsH+YEvqWcGGGJtz3C1TeqZft5YQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\products_and_categories\\products_and_categories.csproj",
+  "projectFilePath": "C:\\Users\\Myles\\Desktop\\Coding Dojo\\products_and_categories\\products_and_categories.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Myles\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Myles\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

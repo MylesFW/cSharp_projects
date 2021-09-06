@@ -5,11 +5,17 @@
 <div class="text-center">
     <h1 class="display-4">all categories</h1>
 </div>
-<div>
-    <div>
-        
+<div class="d-flex justify-content-center mr-4 ">
+    <div class="mr-4" >
+        @{
+            Category newCategory = new Category();
+            <partial model="@newCategory" name="_NewCategory"></partial> 
+        }
+        @* model = used for passing in different model types *@
     </div>
-    <div>
-        
+    <div class="ml-4">
+
+        <partial name="_ExistingCategories"></partial>
     </div>
 </div>
+

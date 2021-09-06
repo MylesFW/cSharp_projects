@@ -1,0 +1,28 @@
+@model Category
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>category details page</h1>
+
+<div>
+    @foreach (var item in ViewBag.RelatedProds)
+    {
+        <p>@item.ProductName</p>
+    }
+</div>
+<div class="text-center">
+  <div class="card w-100" >
+    <div class="card-body">
+        <table class="table table-striped">
+            <h1 class="display-4">@Model.CategoryName</h1><hr>
+            @{
+                Association emptyAssociation = new Association()
+                {
+                    CategoryId = Model.CategoryId
+                };
+            }
+            <partial name="_Association" model="emptyAssociation"></partial>
+        </table>
+    </div>
+  </div>
+</div>

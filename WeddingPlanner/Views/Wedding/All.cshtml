@@ -1,0 +1,68 @@
+@*
+  @model lowercase m to specify the data type of the view model
+  @Model capital m to access the data
+*@
+
+@model List<Wedding>
+
+<h2 class="text-center text-light display-4 font-italic m-0">All Weddings</h2>
+<div class="text-center">
+  <form asp-controller="Wedding" asp-action="New" method="GET">
+      <button class="btn btn-success m-4">New Wedding</button>
+  </form><br class="m-0">
+</div>
+
+@{
+  Wedding emptyWedding = new Wedding();
+}
+@* <partial name="_NewWedding" model="@emptyWedding"></partial>
+<partial name="_NewPost" model="@new Post()"></partial> *@
+
+@foreach (Wedding wedding in Model)
+{
+  bool alreadyRSVPd = wedding.RSVPs.Any(like => Context.Session.GetInt32("UserId") == like.UserId);
+
+  <div class="card shadow-lg rounded mx-auto w-50 mb-3">
+    <h3 class="card-title text-center text-light py-2 rounded">
+
+      @*
+        asp-route-paramName where paramName matches exactly the param name from
+        the controller action (method).
+      *@
+      <a class="font-weight-light font-italic mt-3 font-bold" asp-controller="Wedding" asp-action="Details" asp-route-weddingId="@wedding.WeddingId">@wedding.WedderOne + @wedding.WedderTwo's Wedding 
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart ml-5" viewBox="0 0 16 16">
+          <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+        </svg>
+        </a>
+    </h3>
+      <small class="text-muted text-center">
+        Posted on: @wedding.CreatedAt by <a asp-controller="Home" asp-action="Details" asp-route-userId="@wedding.UserId">
+          @wedding.CreatedBy.FullName()
+        </a>
+      </small>
+    <hr class="m-0">
+
+    <div class="card-body text-center">
+      <p class="card-text">Our celebration of marriage will be held on @wedding.Date.ToShortDateString()</p>
+      <form asp-controller="Wedding" asp-action="RSVP" asp-route-weddingId="@wedding.WeddingId" class="float-start">
+          @if (alreadyRSVPd)
+          {
+            <button class="btn btn-danger m-3">Un-RSVP</button>
+          }
+          else
+          {
+            <button class="btn btn-success m-3">RSVP</button> 
+          }
+          <span class="font-italic">Guests Attending: @wedding.RSVPs.Count</span>
+      </form>
+        @if (wedding.UserId == Context.Session.GetInt32("UserId"))
+        {
+          <div class="row justify-content-center p-3">
+            <form asp-controller="Wedding" asp-action="Delete" asp-route-weddingId="@wedding.WeddingId" method="POST">
+              <button class="btn btn-danger btn-sm">Delete</button>
+            </form>
+          </div>
+        }
+    </div>
+  </div>
+}

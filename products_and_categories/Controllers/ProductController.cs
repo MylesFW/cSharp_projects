@@ -47,6 +47,57 @@ namespace products_and_categories.Controllers
             return View("Products", "Product");
         }
 
+        [HttpGet("/products/{productId}")]
+        public IActionResult ProductDetails(int productId)
+        {
+            Product prod = db.Products
+                .Include(product => product.ProductList)
+                .ThenInclude(catProd => catProd.Category)
+                .FirstOrDefault(p => p.ProductId == productId);
+            
+            if (prod == null)
+            {
+                return RedirectToAction("Products");
+            }
+
+            ViewBag.Product = prod;
+
+            List<Category> allCategories = db.Categorys
+                .Include(cat => cat.CategoryList)
+                .ToList();
+//----------------------------------
+
+            List<Category> unrelatedCategories = new List<Category>();
+
+            ViewBag.UnrelatedCats = db.Categorys
+                .Include(cat => cat.CategoryList)
+                .Where(cat => cat.CategoryList
+                    .Any(catProd => catProd.ProductId == prod.ProductId) == false
+                    )
+                .ToList();
+//----------------------------------
+
+            List<Category> relatedCategories = new List<Category>();
+
+            ViewBag.RelatedCats = db.Categorys
+                .Include(cat => cat.CategoryList)
+                .Where(cat => cat.CategoryList
+                    .Any(catProd => catProd.ProductId == prod.ProductId) != false
+                    )
+                .ToList();
+
+            return View("Details", prod);
+        }
+
+        [HttpPost("/products/{productId}/relate")]
+        public IActionResult AddProdToCat(int productId, Association newAssociation)
+        {
+            newAssociation.ProductId = productId;
+            db.Associations.Add(newAssociation);
+            db.SaveChanges();
+            return RedirectToAction("ProductDetails");
+        }
+
         public IActionResult Privacy()
         {
             return View();

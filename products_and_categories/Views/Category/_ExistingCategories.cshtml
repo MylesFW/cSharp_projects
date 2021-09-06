@@ -1,0 +1,17 @@
+@model List<Category>
+
+<div class="text-center">
+  <div class="card w-100" >
+    <div class="card-body">
+      <h1 class="display-4">Existing Categories</h1><hr>
+        <table class="table table-striped">
+          @foreach(var category in @Model)
+          {
+              <tr>
+                  <td><a href="/categories/@category.CategoryId">@category.CategoryName</a></td>
+              </tr> 
+          }
+      </table>
+    </div>
+  </div>
+</div>

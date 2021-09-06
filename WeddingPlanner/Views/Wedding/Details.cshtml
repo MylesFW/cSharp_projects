@@ -1,0 +1,49 @@
+@model Wedding
+
+@* @{
+  int? uid = Context.Session.GetInt32("UserId");
+  } *@
+
+<div class="card shadow rounded w-75 mx-auto mb-3 ">
+  <h2 class="card-title text-center py-2 rounded font-weight-bold font-italic mt-5 mb-5">
+    ~~ 
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-flower2 mr-5" viewBox="0 0 16 16">
+      <path d="M8 16a4 4 0 0 0 4-4 4 4 0 0 0 0-8 4 4 0 0 0-8 0 4 4 0 1 0 0 8 4 4 0 0 0 4 4zm3-12c0 .073-.01.155-.03.247-.544.241-1.091.638-1.598 1.084A2.987 2.987 0 0 0 8 5c-.494 0-.96.12-1.372.331-.507-.446-1.054-.843-1.597-1.084A1.117 1.117 0 0 1 5 4a3 3 0 0 1 6 0zm-.812 6.052A2.99 2.99 0 0 0 11 8a2.99 2.99 0 0 0-.812-2.052c.215-.18.432-.346.647-.487C11.34 5.131 11.732 5 12 5a3 3 0 1 1 0 6c-.268 0-.66-.13-1.165-.461a6.833 6.833 0 0 1-.647-.487zm-3.56.617a3.001 3.001 0 0 0 2.744 0c.507.446 1.054.842 1.598 1.084.02.091.03.174.03.247a3 3 0 1 1-6 0c0-.073.01-.155.03-.247.544-.242 1.091-.638 1.598-1.084zm-.816-4.721A2.99 2.99 0 0 0 5 8c0 .794.308 1.516.812 2.052a6.83 6.83 0 0 1-.647.487C4.66 10.869 4.268 11 4 11a3 3 0 0 1 0-6c.268 0 .66.13 1.165.461.215.141.432.306.647.487zM8 9a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+    </svg>
+      @Model.WedderOne + @Model.WedderTwo's Wedding 
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-flower2 ml-5" viewBox="0 0 16 16">
+      <path d="M8 16a4 4 0 0 0 4-4 4 4 0 0 0 0-8 4 4 0 0 0-8 0 4 4 0 1 0 0 8 4 4 0 0 0 4 4zm3-12c0 .073-.01.155-.03.247-.544.241-1.091.638-1.598 1.084A2.987 2.987 0 0 0 8 5c-.494 0-.96.12-1.372.331-.507-.446-1.054-.843-1.597-1.084A1.117 1.117 0 0 1 5 4a3 3 0 0 1 6 0zm-.812 6.052A2.99 2.99 0 0 0 11 8a2.99 2.99 0 0 0-.812-2.052c.215-.18.432-.346.647-.487C11.34 5.131 11.732 5 12 5a3 3 0 1 1 0 6c-.268 0-.66-.13-1.165-.461a6.833 6.833 0 0 1-.647-.487zm-3.56.617a3.001 3.001 0 0 0 2.744 0c.507.446 1.054.842 1.598 1.084.02.091.03.174.03.247a3 3 0 1 1-6 0c0-.073.01-.155.03-.247.544-.242 1.091-.638 1.598-1.084zm-.816-4.721A2.99 2.99 0 0 0 5 8c0 .794.308 1.516.812 2.052a6.83 6.83 0 0 1-.647.487C4.66 10.869 4.268 11 4 11a3 3 0 0 1 0-6c.268 0 .66.13 1.165.461.215.141.432.306.647.487zM8 9a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+    </svg>
+    ~~
+  </h2><hr class="m-0">
+
+  <div class="card-body text-center mx-auto">
+    <p class="card-text mx-auto w-25"><span class="font-italic text-center">You're invited.</span><br><br>Come and celebrate the marriage between @Model.WedderOne and @Model.WedderTwo. The festivities will begin at 1:00 in the afternoon, and end at 10:00 in the evening on @Model.Date.</p>
+    <p>The Dress attire is business casual - <span class="font-italic">so please no cargo pants!</span></p><br><hr>
+    <p>Venue: @Model.Address</p><br class="m-0"><hr>
+    <small class="text-muted text-center font-italic">Submitted on: @Model.CreatedAt by @Model.CreatedBy.FullName()</small>
+  </div><hr class="m-0">
+
+  @* Hide edit & delete if not the author *@
+  @if (Model.UserId == Context.Session.GetInt32("UserId"))
+  {
+    <div class="row justify-content-center p-3">
+
+      <form asp-controller="Wedding" asp-action="Delete" asp-route-weddingId="@Model.WeddingId" method="POST">
+        <button class="btn btn-danger btn-sm">Remove Date</button>
+      </form>
+    </div>
+  }
+
+  <div class="card-body">
+    <h4 class="font-weight-light font-italic mt-3">Guests in Attendance: </h4>
+    @foreach (UserWeddingRSVP rsvp in Model.RSVPs)
+    {
+      @* Doing it manually will leave a trailing ", " at the end. *@
+      <span class="ml-5">@rsvp.User.FullName(), <br></span>
+    }
+    @* <span>
+      @String.Join(", ", Model.RSVPs.Select(rsvp => rsvp.User.FullName()))
+    </span> *@
+  </div>
+</div>

@@ -5,15 +5,15 @@
 <div class="text-center">
     <h1 class="display-4">all products</h1>
 </div>
-<div>
-    <div>
+<div  class="d-flex justify-content-center mr-4">
+    <div class="mr-4">
         @{
             Product newProduct = new Product();
             <partial model="@newProduct" name="_NewProduct"></partial> 
         }
         @* model = used for passing in different model types *@
     </div>
-    <div>
+    <div class="ml-4">
 
         <partial name="_ExistingProducts"></partial>
     </div>

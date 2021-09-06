@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\products_and_categories\\products_and_categories.csproj": {}
+    "C:\\Users\\Myles\\Desktop\\Coding Dojo\\products_and_categories\\products_and_categories.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\products_and_categories\\products_and_categories.csproj": {
+    "C:\\Users\\Myles\\Desktop\\Coding Dojo\\products_and_categories\\products_and_categories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\products_and_categories\\products_and_categories.csproj",
+        "projectUniqueName": "C:\\Users\\Myles\\Desktop\\Coding Dojo\\products_and_categories\\products_and_categories.csproj",
         "projectName": "products_and_categories",
-        "projectPath": "C:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\products_and_categories\\products_and_categories.csproj",
+        "projectPath": "C:\\Users\\Myles\\Desktop\\Coding Dojo\\products_and_categories\\products_and_categories.csproj",
         "packagesPath": "C:\\Users\\Myles\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\products_and_categories\\obj\\",
+        "outputPath": "C:\\Users\\Myles\\Desktop\\Coding Dojo\\products_and_categories\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Myles\\AppData\\Roaming\\NuGet\\NuGet.Config"

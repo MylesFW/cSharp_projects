@@ -1,0 +1,14 @@
+@model Association
+  <form asp-action="AddProdToCat" asp-controller="Product" asp-route-productId="@Model.ProductId" method="post">
+      <div>
+          <select asp-for="CategoryId">
+              @foreach (var item in ViewBag.UnrelatedCats)
+              {
+                  <option value="@item.CategoryId">@item.CategoryName</option>
+              }
+          </select>
+      </div>
+      <div>
+          <button class="btn btn-success">Add</button>
+      </div>
+  </form>

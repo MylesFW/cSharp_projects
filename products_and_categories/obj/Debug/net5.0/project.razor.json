@@ -15639,13 +15639,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\products_and_categories\\Views\\Product\\Details.cshtml",
+      "TargetPath": "Views\\Product\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\products_and_categories\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\products_and_categories\\Views\\Category\\_Association.cshtml",
+      "TargetPath": "Views\\Category\\_Association.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\products_and_categories\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\products_and_categories\\Views\\Category\\Details.cshtml",
+      "TargetPath": "Views\\Category\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15666,6 +15681,11 @@
     {
       "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\products_and_categories\\Views\\Product\\_NewProduct.cshtml",
       "TargetPath": "Views\\Product\\_NewProduct.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Myles\\Desktop\\Coding Dojo\\C#\\cSharp_projects\\products_and_categories\\Views\\Product\\_Association.cshtml",
+      "TargetPath": "Views\\Product\\_Association.cshtml",
       "FileKind": "mvc"
     },
     {

@@ -1,14 +1,14 @@
 @model List<Product>
 
 <div class="text-center">
-  <div class="card w-50" >
+  <div class="card w-100" >
     <div class="card-body">
       <h1 class="display-4">Existing Products</h1><hr>
         <table class="table table-striped">
           @foreach(var product in @Model)
           {
               <tr>
-                  <td><a href="@product.ProductId">@product.ProductName</a></td>
+                  <td><a href="/products/@product.ProductId">@product.ProductName</a></td>
               </tr> 
           }
       </table>
